@@ -1,0 +1,35 @@
+#!/bin/bash
+
+INTERNAL="eDP-1"      # Laptop screen
+EXTERNAL="HDMI-A-1"   # Change this if your external name is different
+
+# If external monitor is not connected, just show a warning and exit
+if ! hyprctl monitors | grep -q "$EXTERNAL"; then
+    notify-send "Display" "No external monitor detected ($EXTERNAL)"
+    exit 0
+fi
+
+CHOICE=$(printf "Duplicate\nExtend\nSecond screen only" | wofi --dmenu --prompt "Display Mode")
+
+case "$CHOICE" in
+    "Duplicate")
+        # Same image on both screens
+        hyprctl keyword monitor "$INTERNAL, preferred, 0x0, 1"
+        hyprctl keyword monitor "$EXTERNAL, preferred, mirror,$INTERNAL"
+        ;;
+    "Extend")
+        # External screen on the right
+        hyprctl keyword monitor "$INTERNAL, preferred, 0x0, 1"
+        hyprctl keyword monitor "$EXTERNAL, preferred, auto-right, 1"
+        ;;
+    "Second screen only")
+        # Only external
+        hyprctl keyword monitor "$INTERNAL, disable"
+        hyprctl keyword monitor "$EXTERNAL, preferred, auto, 1"
+        ;;
+    *)
+        # Cancel / Esc pressed
+        exit 0
+        ;;
+esac
+

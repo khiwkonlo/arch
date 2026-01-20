@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 27,
+
+  "autohide": true,
+  "autohide-timeout": 2,
+  "autohide-animation": "slide",
+  "autohide-reveal-on-hover": true,
+  "autohide-reveal-delay": 0.1,
+
+  "modules-left": [
+    "custom/notification",
+    "hyprland/language",
+    "custom/net_speed"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "custom/clipboard",
+    "custom/powerprofile",
+    "memory",
+    "custom/mic",
+    "pulseaudio",
+    "custom/brightness",
+    "battery",
+    "custom/bluetooth",
+    "network",
+    "custom/power"
+  ],
+
+  "custom/notification": {
+    "format": "󰂚",
+    "tooltip": "Notifications",
+    "on-click": "swaync-client -t"
+  },
+
+  "hyprland/language": {
+    "format": " {short}",
+    "tooltip-format": "{full}",
+    "on-click": "hyprctl dispatch switchxkblayout next"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M  %a %b %d}"
+  },
+
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": "Clipboard history",
+    "on-click": "~/.config/waybar/scripts/clipboard_menu.sh"
+  },
+
+  "custom/powerprofile": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/powerprofile.sh display",
+    "interval": 5,
+    "on-click": "kitty -e btop",
+    "on-click-right": "~/.config/waybar/scripts/powerprofile.sh toggle",
+    "tooltip": "Open btop (right-click to toggle power profile)"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {used:0.1f}G / {total:0.1f}G",
+    "format-alt": " {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "{used} / {total} ({percentage}%)"
+  },
+
+  "custom/mic": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/mic_status.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/mic_toggle.sh",
+    "tooltip": "Toggle microphone mute"
+  },
+
+  "pulseaudio": {
+    "format": "󰕾 {volume}%",
+    "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "tooltip": "Volume"
+  },
+
+  "custom/brightness": {
+    "format": "󰃟 {}",
+    "exec": "echo $(($(brightnessctl get)*100/$(brightnessctl max)))%",
+    "interval": 2,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "tooltip": "Brightness"
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁹", "󰂁"],
+    "tooltip": "Click to toggle power mode",
+    "on-click": "~/.config/waybar/scripts/powerprofile.sh toggle"
+  },
+
+  "custom/bluetooth": {
+    "format": "",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
+    "interval": 3,
+    "on-click": "blueman-manager",
+    "tooltip": "Bluetooth Manager"
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}%",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "on-click": "kitty -e nmtui",
+    "tooltip": "Network"
+  },
+
+  "custom/net_speed": {
+    "exec": "bash -c '~/.config/waybar/scripts/net_speed.sh'",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "wlogout",
+    "tooltip": "Power menu"
+  }
+}

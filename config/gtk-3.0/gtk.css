@@ -1,0 +1,136 @@
+/* ───────── Dark Samurai Theme for GTK (Nemo) ───────── */
+
+/* Main window background */
+window {
+    background-color: #0a0a0a;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #151515;
+    border-right: 1px solid #303030;
+}
+
+.sidebar:selected {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+/* Toolbar/Header */
+headerbar,
+.titlebar {
+    background-color: #151515;
+    border-bottom: 1px solid #303030;
+    color: #e0e0e0;
+}
+
+/* Buttons */
+button {
+    background-color: #202020;
+    border: 1px solid #404040;
+    color: #d0d0d0;
+    border-radius: 6px;
+}
+
+button:hover {
+    background-color: #2a2a2a;
+    border-color: #606060;
+    color: #ffffff;
+}
+
+button:active {
+    background-color: #353535;
+}
+
+/* Entry fields (search, path bar) */
+entry {
+    background-color: #1a1a1a;
+    border: 1px solid #404040;
+    color: #d0d0d0;
+    border-radius: 6px;
+}
+
+entry:focus {
+    border-color: #707070;
+    background-color: #202020;
+}
+
+/* File list view */
+.view {
+    background-color: #0f0f0f;
+    color: #d0d0d0;
+}
+
+.view:selected {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: #0a0a0a;
+}
+
+scrollbar slider {
+    background-color: #303030;
+    border-radius: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: #404040;
+}
+
+/* Context menu */
+menu,
+.menu {
+    background-color: #151515;
+    border: 1px solid #404040;
+    color: #d0d0d0;
+}
+
+menuitem:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: #1a1a1a;
+    border: 1px solid #404040;
+    color: #d0d0d0;
+}
+
+/* Status bar */
+statusbar {
+    background-color: #151515;
+    border-top: 1px solid #303030;
+    color: #c0c0c0;
+}
+
+/* Path bar / location bar */
+.path-bar button {
+    background-color: #1a1a1a;
+    border: 1px solid #404040;
+}
+
+.path-bar button:hover {
+    background-color: #252525;
+    border-color: #606060;
+}
+
+/* Notebook tabs */
+notebook > header {
+    background-color: #151515;
+    border-bottom: 1px solid #303030;
+}
+
+notebook > header > tabs > tab {
+    background-color: #1a1a1a;
+    border: 1px solid #404040;
+    color: #c0c0c0;
+}
+
+notebook > header > tabs > tab:checked {
+    background-color: #252525;
+    color: #ffffff;
+}

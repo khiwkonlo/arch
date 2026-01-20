@@ -1,0 +1,89 @@
+/* ───────── Dark Samurai Theme ───────── */
+/* Monochrome blacks and grays */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 12px;
+    color: #d0d0d0; /* Light gray text */
+}
+
+/* ───────── Background Panel ───────── */
+
+#window {
+    background-color: rgba(15, 15, 15, 0.92); /* Deep black */
+    border: 1px solid rgba(100, 100, 100, 0.6); /* Gray border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.9);
+}
+
+/* Header */
+#header {
+    background-color: rgba(25, 25, 25, 0.7); /* Dark gray */
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+    padding: 10px;
+}
+
+#title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+/* Clear All */
+#clear-all {
+    background-color: rgba(30, 30, 30, 0.6); /* Dark gray */
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: 0.15s;
+    color: #d0d0d0;
+}
+
+#clear-all:hover {
+    background-color: rgba(50, 50, 50, 0.8); /* Lighter gray */
+    border-color: rgba(150, 150, 150, 0.7);
+    color: #ffffff;
+}
+
+/* ───────── Notifications ───────── */
+
+.notification {
+    background-color: rgba(25, 25, 25, 0.7); /* Dark gray */
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 9px;
+    padding: 10px;
+    margin: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+.notification:hover {
+    background-color: rgba(40, 40, 40, 0.8); /* Lighter gray */
+    border-color: rgba(150, 150, 150, 0.7);
+}
+
+.notification .summary {
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.notification .body {
+    color: #c0c0c0; /* Medium gray */
+}
+
+/* ───────── Do Not Disturb Toggle ───────── */
+
+.switch {
+    background-color: rgba(30, 30, 30, 0.6); /* Dark gray */
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    border-radius: 6px;
+}
+
+.switch:hover {
+    background-color: rgba(50, 50, 50, 0.8); /* Lighter gray */
+    border-color: rgba(150, 150, 150, 0.7);
+}
+
+.switch slider {
+    background-color: rgba(150, 150, 150, 0.8); /* Gray slider */
+    border-radius: 6px;
+}

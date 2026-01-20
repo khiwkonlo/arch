@@ -1,0 +1,93 @@
+/* ───────── Dark Samurai Theme ───────── */
+/* Matches the moody black/gray aesthetic */
+
+window {
+  background-color: rgba(10, 10, 10, 0.95); /* Very dark black background */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  color: #e0e0e0;
+}
+
+/* Center grid */
+box {
+  padding: 30px;
+}
+
+/* ───────── Button Tiles ───────── */
+
+button {
+  margin: 12px;
+  border-radius: 10px;
+
+  /* Dark gray border + pill */
+  border: 1px solid rgba(120, 120, 120, 0.6); /* Gray border */
+  background-color: rgba(25, 25, 25, 0.7);    /* Dark background */
+  color: #d0d0d0;
+
+  min-width: 210px;
+  min-height: 170px;
+
+  font-size: 14px;
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  transition: background 0.15s ease, border-color 0.15s ease;
+
+  /* Icon placement */
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  background-size: 28%;
+}
+
+/* Icon color */
+button image {
+  color: #c0c0c0; /* Light gray icons */
+  margin-bottom: 12px;
+}
+
+button label {
+  font-size: 13px;
+  color: #d0d0d0;
+}
+
+/* ───────── Hover ───────── */
+
+button:hover {
+  background-color: rgba(50, 50, 50, 0.85); /* Lighter gray on hover */
+  border-color: rgba(180, 180, 180, 0.9);   /* Bright gray border */
+  color: #ffffff;
+}
+
+button:hover label {
+  color: #ffffff;
+}
+
+/* ───────── Individual Buttons ───────── */
+
+#lock {
+  background-image: image(url("./icons/lock.png"),
+                          url("/usr/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+  background-image: image(url("./icons/logout.png"),
+                          url("/usr/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+  background-image: image(url("./icons/suspend.png"),
+                          url("/usr/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+  background-image: image(url("./icons/hibernate.png"),
+                          url("/usr/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+  background-image: image(url("./icons/shutdown.png"),
+                          url("/usr/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+  background-image: image(url("./icons/reboot.png"),
+                          url("/usr/share/wlogout/icons/reboot.png"));
+}

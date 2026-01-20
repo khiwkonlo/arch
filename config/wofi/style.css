@@ -1,0 +1,52 @@
+/* ───────── Dark Samurai Theme ───────── */
+/* Matches the moody black/gray aesthetic */
+
+window {
+    margin: 0px;
+    padding: 20px;
+    background-color: rgba(15, 15, 15, 0.92); /* Deep black with high opacity */
+    border-radius: 12px;
+    border: 2px solid rgba(120, 120, 120, 0.6); /* Gray border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+#input {
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    background-color: rgba(30, 30, 30, 0.7); /* Dark gray */
+    color: #e0e0e0;
+    border: 1px solid rgba(120, 120, 120, 0.5);
+    font-size: 15px;
+}
+
+#input:focus {
+    border: 1px solid rgba(180, 180, 180, 0.8); /* Bright gray on focus */
+    background-color: rgba(40, 40, 40, 0.8);
+    color: #f0f0f0;
+}
+
+#entry {
+    padding: 10px 14px;
+    margin: 4px 0;
+    border-radius: 8px;
+    background-color: rgba(25, 25, 25, 0.5); /* Darker background */
+    color: #d0d0d0;
+    border: 1px solid rgba(80, 80, 80, 0.3);
+}
+
+#entry:selected {
+    background-color: rgba(50, 50, 50, 0.8); /* Lighter gray when selected */
+    border-color: rgba(180, 180, 180, 0.8);   /* Bright gray border */
+    color: #ffffff;
+}
+
+#text {
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+#entry:selected #text {
+    color: #ffffff;
+    font-weight: 600;
+}

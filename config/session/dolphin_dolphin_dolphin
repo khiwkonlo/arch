@@ -1,0 +1,12 @@
+[1]
+Active Tab Index=0
+Tab Count=1
+Tab Data 0=\x00\x00\x00\x03\x00\x00\x00\x00@file:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr\x00\x00\x00\x00\x01\x00\x00\x00Efile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/conf\x00\x00\x00\x06\x00\x00\x00Efile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/conf\x00\x00\x00Hfile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/scripts\x00\x00\x00Tfile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/.transparency_state\x00\x00\x00Nfile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/hyprland.conf\x00\x00\x00Nfile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/hyprlock.conf\x00\x00\x00Ofile:///run/media/madara/0AF1-5F51/hyprland-backup-20260110/hypr/hyprpaper.conf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x1b\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x01\x00\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00
+
+[Number]
+NumberOfWindows=1
+
+[WindowProperties1]
+ClassName=DolphinMainWindow
+MenuBar=Disabled
+ObjectName=Dolphin#1
